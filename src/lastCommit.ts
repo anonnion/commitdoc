@@ -15,7 +15,7 @@ function getLastCommitUrl(): Thenable<string | undefined> {
         if (lastCommitHash) {
           return repository.resolveReference(lastCommitHash).then((commit: any) => {
             return commit.committerDate?.toISOString();
-          });
+          }); 
         }
       }
     }
